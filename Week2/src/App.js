@@ -1,18 +1,13 @@
-import logo from "./logo.svg";
+import { ThemeProvider } from "@material-ui/core";
 import "./App.css";
-import User from "./User";
+import "./assets/css/style.css";
+import { theme } from "./utils/theme";
+import Register from "./pages/register";
 
 export const App = () => {
-  const userName = "Keval";
-  const userId = [1, 2, 4];
-
   return (
-    <div className="App">
-      App Component
-      <User a={userName} userId={userId} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <Register />
+    </ThemeProvider>
   );
 };
-
-// export default App;
-// export { App };
